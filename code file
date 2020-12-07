@@ -1,0 +1,30 @@
+import string          # It's import string
+
+import random          # It's will import random
+
+if __name__ == '__main__':
+    s1 = string.ascii_lowercase     # 's1' is string that import lower case 
+    s2 = string.ascii_uppercase     # 's2' is string that import upper case 
+    s3 = string.digits              # 's3' is string that import digit 
+    s4 = string.punctuation         # 's4' is string that import punctuation
+     
+    # print("\n",s1,"\n")
+    
+    # print(s2,"\n")
+    
+    # print(s3,"\n")
+    
+    # print(s4,"\n")
+    
+    passlen =int(input("Enter the length of password :"))
+    s = []
+    s.extend(list(s1))    # All elemnts of 's1' is add into the 's'
+    s.extend(list(s2))    # All elemnts of 's2' is add into the 's'
+    s.extend(list(s3))    # All elemnts of 's3' is add into the 's'
+    s.extend(list(s4))    # All elemnts of 's4' is add into the 's'
+    random.shuffle(s)     # Ha shueffle karanar 's' la 
+    
+    #print("".join(s[0:passlen]))   # Ha 's' join honar 'passlen' means (user I/P) la and print karnar random password
+    print("Your Password is :")
+    print(" ". join(random.sample(s,passlen)))        
+        
